@@ -5,14 +5,15 @@ import HeaderComponent from './HeaderComponent'
 // per convenzione tutti i componenti React cominciano con la lettera Maiuscola (PascalCase)
 // il nome di questa sintassi per scrivere HTML è "JSX"
 
-// JSX è il nome di
+// importiamo anche il componente a classe
+import ClassExampleComponent from './ClassExampleComponent'
 
 const firstName = 'Wendy'
 
 const App = () => {
   return (
     <div className="App">
-      <HeaderComponent />
+      <HeaderComponent nameToShow="Stefano" textColor="red" />
       <main>
         <img
           src="https://placekitten.com/300"
@@ -20,6 +21,7 @@ const App = () => {
           alt="logo"
         />
         <p>Ciao sono {firstName}</p>
+        <ClassExampleComponent textColor="red" />
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -28,7 +30,7 @@ const App = () => {
         >
           Learn React
         </a>
-        <HeaderComponent />
+        <HeaderComponent nameToShow="Davide" textColor="blue" />
       </main>
     </div>
   )
